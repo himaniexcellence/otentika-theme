@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © 2013-2017 Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+-->
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no"/>
+        <link href="https://fonts.googleapis.com/css?family=Yantramanav" rel="stylesheet" src_type="url" />
+       <link rel="stylesheet" type="text/css" src="http://fonts.googleapis.com/css?family=Oswald" src_type="url" />
+        <link rel="stylesheet" type="text/css" src="http://fonts.googleapis.com/css?family=Montserrat:400,800" src_type="url" /> 
+        <link rel="stylesheet" type="text/css" src="http://fonts.googleapis.com/css?family=Merriweather" src_type="url" />
+    </head>
+</page>
