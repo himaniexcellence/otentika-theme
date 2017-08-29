@@ -1,0 +1,37 @@
+<?php
+/**
+ * Copyright © 2013-2017 Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+
+// @codingStandardsIgnoreFile
+
+?>
+<?php
+/**
+ * Top menu for store
+ *
+ * @var $block \Magento\Theme\Block\Html\Topmenu
+ */
+?>
+<?php $columnsLimit = $block->getColumnsLimit() ?: 0; ?>
+<?php $_menu = $block->getHtml('level-top', 'submenu', $columnsLimit) ?>
+
+<nav class="navigation" data-action="navigation" style="top:0;">
+    <ul data-mage-init='{"menu":{"responsive":true, "expanded":true, "position":{"my":"left top","at":"left bottom"}}}'>
+    	<li style="display:none;" class="hom"><a href="http://localhost/himani/magento">HOME</a></li>
+        <li><a href="http://localhost/himani/magento/about">THE BRAND</a></li>
+        <li><a href="http://localhost/himani/magento/products">PRODUCTS</a></li>
+        <li><a href="http://localhost/himani/magento/special">WHAT'S NEW</a></li>
+        <li><a href="">CONTACT US</a></li>
+    </ul>
+</nav>
+<style type="text/css">
+	.navigation li{
+		text-decoration: none;
+		display: inline-block;
+	}
+	.navigation ul{
+		margin-top: 3% !important;
+	}
+</style>

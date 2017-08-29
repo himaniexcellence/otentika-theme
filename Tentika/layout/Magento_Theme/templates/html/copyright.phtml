@@ -1,0 +1,84 @@
+<?php
+/**
+ * Copyright © 2013-2017 Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+?>
+<small class="copyright">
+	<div class="line" style="background-color:rgba(128, 128, 128, 0.25);width:100%;height: 1px;margin-bottom: 25px;"></div>
+    <span><?php /* @escapeNotVerified */ echo $block->getCopyright() ?>
+    </span>
+    <div class="footer-social-icons">
+    	<ul class="social-icons">
+    		<li><a href="" class="social-icon"> <i class="fa fa-vk"></i></a></li>
+    		<li><a href="" class="social-icon"> <i class="fa fa-facebook"></i></a></li>
+    		<li><a href="" class="social-icon"> <i class="fa fa-twitter"></i></a></li>
+    	</ul>
+    </div>
+</small>
+<style type="text/css">
+	@import url(https://fonts.googleapis.com/css?family=Lato);
+	@import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.css);
+	a {
+	    text-decoration: none;
+	    color: #fff;
+	}
+	p > a:hover{
+	    color: #d9d9d9;
+	    text-decoration:  underline;
+	}
+	ul {
+	    padding:0;
+	    list-style: none;
+	    margin-bottom: 0 !important;
+	}
+	.footer-social-icons{
+		display: inline-block;
+		float: right;
+	}
+	.social-icons li {
+	    display: inline;
+	}
+	.social-icons a {
+	    color: #fff;
+	    text-decoration: none;
+	}
+	.fa-facebook {
+	    padding:10px 14px;
+	    -o-transition:.5s;
+	    -ms-transition:.5s;
+	    -moz-transition:.5s;
+	    -webkit-transition:.5s;
+	    transition: .5s;
+	    font-size: 2vw;
+	}
+	.fa-facebook:hover {
+	    background-color: #3d5b99;
+	}
+	.fa-twitter {
+	   padding:10px 12px;
+	    -o-transition:.5s;
+	    -ms-transition:.5s;
+	    -moz-transition:.5s;
+	    -webkit-transition:.5s;
+	    transition: .5s;
+	    font-size: 2vw;
+	}
+	.fa-twitter:hover {
+	    background-color: #00aced;
+	}
+	.fa-vk{
+		 padding:10px 12px;
+	    -o-transition:.5s;
+	    -ms-transition:.5s;
+	    -moz-transition:.5s;
+	    -webkit-transition:.5s;
+	    transition: .5s;
+		content: "\f189";
+		font-size: 2vw;
+	}
+	.fa-vk:hover{
+		background-color: #45668e
+	}
+
+</style>
