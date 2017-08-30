@@ -1,0 +1,345 @@
+// /**
+//  * Copyright © 2013-2017 Magento, Inc. All rights reserved.
+//  * See COPYING.txt for license details.
+//  */
+
+//
+//  Variables
+//  _____________________________________________
+
+@toolbar-mode-icon-font-size: 16px;
+@toolbar-background: #f5f5f5;
+@toolbar-element-background: @color-gray94;
+@pager-action__background: @toolbar-element-background;
+@pager-action__hover__background: darken(@toolbar-element-background, 7%);
+@pager__font-weight: @font-weight__bold;
+
+//
+//  Common
+//  _____________________________________________
+
+& when (@media-common = true) {
+    .page-products {
+        .columns {
+            padding-top: 60px;
+            position: relative;
+            z-index: 1;
+        }
+    }
+    .sorter-action:before{
+        display: none !important;
+    }
+    .pages .items{
+        width: 100% !important;
+        text-align: center;
+    }
+    .pages .item{
+        width: 8% !important;
+    }
+    .pages .action{
+        box-shadow: none !important;
+        border-radius: 0 !important;
+        background: transparent !important;
+        border: 0;
+    }
+    .pages .action.next:before, .action.previous:before{
+        content: '' !important;
+    }
+    .pages .action.next{
+        background: url('@{baseDir}images/right.png') 50% no-repeat !important;
+        background-size: 8px !important;
+    }
+    .pages .action.previous{
+        background: url('@{baseDir}images/left.png') 50% no-repeat !important;
+        background-size: 8px !important;
+    }
+    .pages strong.page{
+        background: orangered !important;
+        opacity: 0.8 !important;
+        color: white !important;
+        border-radius: 50px;
+        width: 20px;
+    }
+    .toolbar {
+        &:extend(.abs-add-clearfix all);
+        margin-bottom: @indent__l;
+        text-align: center;
+
+        select {
+            .lib-css(background-color, @toolbar-element-background);
+            .lib-css(box-shadow, @button__shadow);
+            border-radius: 3px;
+        }
+
+        &-amount {
+            left: 0;
+            line-height: @toolbar-mode-icon-font-size + 2;
+            padding: 7px 0;
+            position: absolute;
+            top: 0;
+            vertical-align: middle;
+            font-size: 1.1vw;
+            margin:2% 12%;
+            color: #9a9a9a;
+            text-align: center;
+
+            .products.wrapper ~ .toolbar & {
+                display: none;
+            }
+        }
+
+        .page-with-filter & {
+            &-amount {
+                position: static;
+            }
+        }
+
+        &-products {
+            margin-left: 2%;
+            .lib-css(background-color, @toolbar-background);
+            padding: 1%;
+            padding-bottom: 0;
+
+            .pages {
+                display: none;
+
+                .products.wrapper ~ & {
+                    display: block;
+                }
+            }
+        }
+
+        .pages {
+            margin-bottom: @indent__m;
+            width: 100% !important;
+        }
+    }
+
+    .sorter {
+        float: right;
+        padding-left: 2%;
+
+        .page-products & {
+            position: absolute;
+            right: @indent__s;
+            top: 0;
+            z-index: 1;
+        }
+
+        .products.wrapper ~ .toolbar & {
+            display: none;
+        }
+        
+        &-options {
+            display: inline-block;
+            background-size: 12px !important;
+            font-size:1vw;
+            font-weight:600;
+            padding-left:0;
+            margin:0;
+            color:orangered;
+            background-color:transparent;
+            border:0;
+            border-radius:0;
+            box-shadow: none;
+            margin-left: 1%;
+            
+            a{
+                color: #333333 !important;
+                font-weight:bold;
+                &:hover{
+                    color: orangered !important;
+                    text-decoration: none;
+                }
+                &:active{
+                    color: orangered !important;
+                    text-decoration: none;
+                }
+                &:visited{
+                    color: #333333 !important;
+                    text-decoration: none;
+                }
+                span{
+                    width:20px;
+                    height:20px;
+                    background-size: 50% 40%;
+                    display:inline-block;
+                    top:.5em;
+                    position: relative;
+                }
+            }
+            li{
+                padding-left: 2%;
+                cursor:pointer;
+                color:black;
+                display: inline-block;
+            }
+        }
+
+        &-action {
+            .lib-icon-font(
+            @icon-arrow-up,
+            @_icon-font-size: 16px,
+            @_icon-font-color: @header-icons-color,
+            @_icon-font-color-hover: @header-icons-color-hover
+            );
+            .lib-icon-text-hide();
+
+            &.sort-desc:before {
+                content: @icon-arrow-down;
+            }
+        }
+        select{
+            background: @select__background url('../images/select-bg1.png') no-repeat 100% 45% !important;
+        }
+    }
+
+    .modes {
+        display: none;
+    }
+
+    .limiter {
+        display: none;
+
+        &-options {
+            margin: 0 5px 0 7px;
+            width: auto;
+        }
+
+        &-label {
+            font-weight: 400;
+        }
+
+        .page-products .toolbar & {
+            display: none;
+        }
+
+        .control {
+            display: inline-block;
+        }
+
+        select{
+            color:#333333;
+            font-weight:bold;
+            font-size:1vw;
+            background-color: transparent;
+            box-shadow: none;
+            border-radius: 0;
+            margin:0;
+            padding:4px 25px 4px 5px;
+            border:0;
+        }
+    }
+}
+
+//
+//  Desktop
+//  _____________________________________________
+
+.media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__s) {
+    .toolbar-products {
+        margin-bottom: 0;
+    }
+}
+
+.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__m) {
+    .page-products {
+        .columns {
+            padding-top: 0;
+            position: relative;
+            z-index: 1;
+        }
+    }
+
+    .toolbar-amount {
+        display: block;
+        float: left;
+        position: static;
+    }
+
+    .toolbar {
+        .products.wrapper ~ & .pages {
+            float: left;
+            margin-bottom: 0;
+        }
+    }
+
+    .modes {
+        display: inline-block;
+        float: left;
+        margin-right: @indent__base;
+
+        .products.wrapper ~ .toolbar & {
+            display: none;
+        }
+    }
+
+    .modes-label {
+        &:extend(.abs-visually-hidden-desktop all);
+    }
+
+    .modes-mode {
+        .lib-css(background-color, @toolbar-element-background);
+        .lib-css(box-shadow, @button__shadow);
+        .lib-css(color, @text__color__muted);
+        border: 1px solid @border-color__base;
+        border-right: 0;
+        float: left;
+        font-weight: @font-weight__regular;
+        line-height: 1;
+        padding: 7px 10px;
+        text-align: center;
+        cursor: pointer;
+
+        .modes-label + & {
+            border-radius: 3px 0 0 3px;
+        }
+
+        &:hover {
+            .lib-css(color, black);
+            background: darken(@toolbar-element-background, 2%);
+        }
+
+        &:last-child {
+            border-radius: 0 3px 3px 0;
+            border-right: 1px solid @border-color__base;
+        }
+
+        &.active {
+            .lib-css(box-shadow, @button__shadow-active);
+            background: darken(@toolbar-element-background, 7%);
+            color: @color-gray62;
+            &.active:before{
+                color: black;
+            }
+        }
+
+        .lib-icon-font(
+        @icon-grid,
+        @_icon-font-size: @toolbar-mode-icon-font-size,
+        @_icon-font-text-hide: true,
+        @_icon-font-color: @text__color__muted,
+        @_icon-font-color-hover: @text__color__muted
+        );
+    }
+
+    .sorter {
+        .page-products & {
+            position: static;
+        }
+    }
+
+    .mode-list {
+        &:before {
+            content: @icon-list;
+        }
+    }
+
+    .limiter {
+        float: right;
+        padding-right: 1%;  
+        .products.wrapper ~ .toolbar & {
+            display: block;
+        }
+    }
+}

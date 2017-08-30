@@ -1,0 +1,29 @@
+<?php
+/**
+ * Copyright © 2013-2017 Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+
+// @codingStandardsIgnoreFile
+
+/* @var $block \Magento\Wishlist\Block\Link */
+?>
+<li class="link wishlist" data-bind="scope: 'wishlist'" style="margin-left: 10px;">
+    <a <?php /* @escapeNotVerified */ echo $block->getLinkAttributes() ?>>
+       <span class="wish"><img src="pub/media/wysiwyg/list.png" width="60%" /></span>
+    </a>
+</li>
+<script type="text/x-magento-init">
+    {
+        "*": {
+            "Magento_Ui/js/core/app": {
+                "components": {
+                    "wishlist": {
+                        "component": "Magento_Wishlist/js/view/wishlist"
+                    }
+                }
+            }
+        }
+    }
+
+</script>
