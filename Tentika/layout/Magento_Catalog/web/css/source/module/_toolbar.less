@@ -74,12 +74,14 @@
         &-amount {
             left: 0;
             line-height: @toolbar-mode-icon-font-size + 2;
-            margin: 0;
             padding: 7px 0;
             position: absolute;
-            text-align: left;
             top: 0;
             vertical-align: middle;
+            font-size: 1.1vw;
+            margin:2% 12%;
+            color: #9a9a9a;
+            text-align: center;
 
             .products.wrapper ~ .toolbar & {
                 display: none;
@@ -127,14 +129,15 @@
         .products.wrapper ~ .toolbar & {
             display: none;
         }
+        
         &-options {
             display: inline-block;
             background-size: 12px !important;
             font-size:1vw;
             font-weight:600;
+            padding-left:0;
             margin:0;
             color:orangered;
-            width:auto;
             background-color:transparent;
             border:0;
             border-radius:0;
@@ -156,6 +159,20 @@
                     color: #333333 !important;
                     text-decoration: none;
                 }
+                span{
+                    width:20px;
+                    height:20px;
+                    background-size: 50% 40%;
+                    display:inline-block;
+                    top:.5em;
+                    position: relative;
+                }
+            }
+            li{
+                padding-left: 2%;
+                cursor:pointer;
+                color:black;
+                display: inline-block;
             }
         }
 
@@ -199,6 +216,18 @@
 
         .control {
             display: inline-block;
+        }
+
+        select{
+            color:#333333;
+            font-weight:bold;
+            font-size:1vw;
+            background-color: transparent;
+            box-shadow: none;
+            border-radius: 0;
+            margin:0;
+            padding:4px 25px 4px 5px;
+            border:0;
         }
     }
 }

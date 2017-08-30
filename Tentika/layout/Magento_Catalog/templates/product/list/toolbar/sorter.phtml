@@ -20,11 +20,11 @@ use Magento\Catalog\Model\Product\ProductList\Toolbar;
     
     <ul id="sorter" data-role="sorter" class="sorter-options"> 
             <?php foreach ($block->getAvailableOrders() as $_key => $_order): ?>
-            <li style="padding-left: 2%;cursor:pointer;color:black;display: inline-block;">
+            <li>
                 <a href="#" <?php if ($block->isOrderCurrent($_key)): ?> style="color:orangered !important;" <?php endif; ?>
                 >
                     <?php echo $block->escapeHtml(__($_order)) ?>
-                    <span style="background: url('pub/media/wysiwyg/select_1.png') 1% no-repeat;width:20px;height:20px;background-size: 50% 40%;display:inline-block;top:.5em;position: relative;"></span>
+                    <span style="background: url('pub/media/wysiwyg/select_1.png') 1% no-repeat;"></span>
                 </a>
             </li>
             <?php endforeach; ?>

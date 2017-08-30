@@ -12,5 +12,7 @@
        <link rel="stylesheet" type="text/css" src="http://fonts.googleapis.com/css?family=Oswald" src_type="url" />
         <link rel="stylesheet" type="text/css" src="http://fonts.googleapis.com/css?family=Montserrat:400,800" src_type="url" /> 
         <link rel="stylesheet" type="text/css" src="http://fonts.googleapis.com/css?family=Merriweather" src_type="url" />
+        <link rel="stylesheet" type="text/css" src="https://fonts.googleapis.com/css?family=Lato" src_type="url" />
+        <link rel="stylesheet" type="text/css" src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.css" src_type="url" />
     </head>
 </page>

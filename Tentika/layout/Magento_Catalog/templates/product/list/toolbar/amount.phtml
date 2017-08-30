@@ -15,7 +15,7 @@
  */
 use Magento\Catalog\Model\Product\ProductList\Toolbar;
 ?>
-<p class="toolbar-amount" id="toolbar-amount" style="font-size: 1.1vw;margin:2% 12%;color: #9a9a9a;text-align: center;">
+<p class="toolbar-amount" id="toolbar-amount" style="">
     <?php if ($block->getLastPageNum() > 1): ?>
         <?php /* @escapeNotVerified */ echo __('We have selected for you %1 products',
             '<span class="toolbar-number">' . $block->getTotalNum() . '</span>') ?>

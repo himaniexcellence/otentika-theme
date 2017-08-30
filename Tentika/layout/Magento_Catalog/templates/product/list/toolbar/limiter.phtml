@@ -20,7 +20,7 @@ use Magento\Catalog\Model\Product\ProductList\Toolbar;
         <span style="font-weight: bold;"><?php /* @escapeNotVerified */ echo __('SHOW:') ?></span>
     </label>
     <div class="control">
-        <select id="limiter" style="color:#333333;font-weight:bold;font-size:1vw;background-color: transparent;box-shadow: none;border-radius: 0;margin:0;padding:4px 25px 4px 5px;border:0;" data-role="limiter" class="limiter-options">
+        <select id="limiter" data-role="limiter" class="limiter-options">
             <?php foreach ($block->getAvailableLimit() as $_key => $_limit): ?>
                 <option value="<?php /* @escapeNotVerified */ echo $_key ?>"<?php if ($block->isLimitCurrent($_key)): ?>
                     selected="selected"<?php endif ?>>
